@@ -7,6 +7,17 @@ body {
 
 // Utilities and Breakpoints
 
+.nav-hor {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    float: left;
+  }
+}
+
 @mixin breakpoint($device_or_width) {
   // Stolen from my supervisor, Radames
   @if $device_or_width == small {

@@ -28,7 +28,7 @@ export default () => {
       <div className="hero-detail-container">
         <div className="head-title-social">
           <h1>{data.site.siteMetadata.title}</h1>
-          <nav className="social-bar">
+          <nav className="social-bar nav-hor">
             {/* will need to iterate through available socials, max ? */}
             <ul>
               <li>

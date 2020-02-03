@@ -1,5 +1,6 @@
 import React from "react"
 import "../styles/menu.scss"
+import "../styles/global.scss"
 import { Link } from "gatsby"
 
 export default () => {
@@ -7,7 +8,7 @@ export default () => {
     <div>
       <header className="site-head">
         <div className="nav-flex-container">
-          <nav className="nav">
+          <nav className="nav-hor head-bar">
             <ul>
               <li>
                 <div className="logo-container">
