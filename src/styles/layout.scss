@@ -1,0 +1,39 @@
+@import "./global.scss";
+
+.master-container {
+  max-width: 1352px;
+  margin: 0 auto;
+}
+
+.hero-img-container {
+}
+
+.hero-container {
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+  flex-direction: column;
+  @include breakpoint(small) {
+    flex-direction: row;
+  }
+}
+
+.hero-img-src {
+  width: 100%;
+  height: 402px;
+  object-fit: cover;
+  object-position: center top;
+  @include breakpoint(small) {
+    width: 90%;
+    height: 402px;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+.hero-detail-container {
+  position: relative;
+  @include breakpoint(small) {
+    left: -70px;
+  }
+}

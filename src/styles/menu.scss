@@ -1,0 +1,17 @@
+@import "./global.scss";
+
+.nav-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    float: left;
+    margin: 0 2.3rem 0 0rem;
+  }
+}
