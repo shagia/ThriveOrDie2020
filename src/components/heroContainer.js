@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import "../styles/layout.scss"
+import "../styles/hero.scss"
 
 export default () => {
   const data = useStaticQuery(
