@@ -6,6 +6,7 @@ import HeaderMenu from "../components/headerMenu"
 export default ({ data }) => (
   <div className="master-container">
     <HeaderMenu></HeaderMenu>
+    {/* consider using two layouts at this point */}
     <Layout>
       <div>Hello world!</div>
     </Layout>
