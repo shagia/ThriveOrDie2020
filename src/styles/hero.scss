@@ -24,9 +24,18 @@
 }
 
 .head-title-social {
+  display: inline-block;
   position: relative;
   @include breakpoint(small) {
-    left: -70px;
+    left: -60px;
+  }
+}
+
+.head-bio {
+  max-width: 40rem;
+  padding-top: 1rem;
+  @include breakpoint(small) {
+    padding-top: 3rem;
   }
 }
 
