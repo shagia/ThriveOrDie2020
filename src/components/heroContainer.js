@@ -25,7 +25,29 @@ export default () => {
         ></img>
       </div>
       <div className="hero-detail-container">
-        <h1>{data.site.siteMetadata.title}</h1>
+        <div className="head-title-social">
+          <h1>{data.site.siteMetadata.title}</h1>
+          <nav className="social-bar">
+            {/* will need to iterate through available socials, max ? */}
+            <ul>
+              <li>
+                <a href>Twitter</a>
+              </li>
+              <li>
+                <a href>Twitter</a>
+              </li>
+              <li>
+                <a href>Twitter</a>
+              </li>
+              <li>
+                <a href>Twitter</a>
+              </li>
+              <li>
+                <a href>Twitter</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   )

@@ -32,8 +32,10 @@
 }
 
 .hero-detail-container {
-  position: relative;
-  @include breakpoint(small) {
-    left: -70px;
+  .head-title-social {
+    position: relative;
+    @include breakpoint(small) {
+      left: -70px;
+    }
   }
 }
