@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import HeroContainer from "../components/heroContainer"
+import HeroContainer from "./heroContainer"
 import "../styles/layout.scss"
 import "../styles/global.scss"
 

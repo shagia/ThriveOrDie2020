@@ -1,15 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import HomeLayout from "../components/homeLayout"
 import HeaderMenu from "../components/headerMenu"
 
 export default ({ data }) => (
   <div className="master-container">
     <HeaderMenu></HeaderMenu>
     {/* consider using two layouts at this point */}
-    <Layout>
+    <HomeLayout>
       <div>Hello world!</div>
-    </Layout>
+    </HomeLayout>
   </div>
 )
 
