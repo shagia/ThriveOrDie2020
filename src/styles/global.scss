@@ -3,22 +3,6 @@
 $break-small: 320px;
 $break-large: 1200px;
 
-//Defaults
-
-.master-container {
-  max-width: 1552px;
-  margin: 0 auto;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  padding: 0;
-  margin: 0;
-}
-
 // Utilities and Breakpoints
 
 .nav-hor {
@@ -60,4 +44,28 @@ h5 {
       @content;
     }
   }
+}
+
+//Defaults
+
+html {
+  font-size: 80%;
+  -webkit-font-smoothing: antialiased;
+  @include breakpoint(large) {
+    font-size: 100%;
+  }
+}
+
+.master-container {
+  max-width: 1552px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
 }
