@@ -2,6 +2,7 @@
 
 $break-small: 320px;
 $break-large: 1200px;
+$padding-spacing: 1rem;
 
 // Utilities and Breakpoints
 
@@ -59,6 +60,7 @@ html {
 .master-container {
   max-width: 1552px;
   margin: 0 auto;
+  padding: 0 $padding-spacing 0 $padding-spacing;
 }
 
 h1,
