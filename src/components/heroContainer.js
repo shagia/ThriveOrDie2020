@@ -13,18 +13,23 @@ export default () => {
             title
           }
         }
-        allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
-          nodes {
-            parent {
-              ... on File {
-                childMarkdownRemark {
-                  frontmatter {
-                    date
-                    title
-                    artists
-                  }
-                  rawMarkdownBody
-                  html
+        allFile(
+          filter: { relativeDirectory: { eq: "data/releases" } }
+          sort: {
+            order: DESC
+            fields: childMarkdownRemark___frontmatter___date
+          }
+          limit: 1
+        ) {
+          edges {
+            node {
+              childMarkdownRemark {
+                html
+                frontmatter {
+                  artists
+                  artwork
+                  date
+                  title
                 }
               }
             }
@@ -72,8 +77,7 @@ export default () => {
           <br></br>
           <div
             dangerouslySetInnerHTML={{
-              __html:
-                data.allMarkdownRemark.nodes[0].parent.childMarkdownRemark.html,
+              __html: data.allFile.edges[0].node.childMarkdownRemark.html,
             }}
           />
         </div>
