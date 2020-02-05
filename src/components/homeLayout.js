@@ -22,7 +22,6 @@ export default ({ children }) => {
       <div>
         <HeroContainer></HeroContainer>
       </div>
-      <br />
       {children}
     </div>
   )

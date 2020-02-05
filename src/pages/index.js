@@ -9,7 +9,9 @@ export default ({ data }) => (
     <HeaderMenu></HeaderMenu>
     {/* consider using two layouts at this point */}
     <HomeLayout>
-      <div>Hello world!</div>
+      <small style={{ padding: "1rem", textAlign: "center", display: "block" }}>
+        THRIVE
+      </small>
       <TimelineItem></TimelineItem>
     </HomeLayout>
   </div>
