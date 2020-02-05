@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import "../styles/global.scss"
+import "../styles/timelineitem.scss"
 
 export default () => {
   const data = useStaticQuery(
@@ -21,7 +22,7 @@ export default () => {
         <img
           src="https://picsum.photos/1200"
           alt="timeline img"
-          className="img-fit img-tl-lg"
+          className="img-fluid img-tl-lg"
         ></img>
       </div>
       <div className="item-article">

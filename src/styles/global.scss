@@ -6,7 +6,7 @@ $break-large: 1200px;
 //Defaults
 
 .master-container {
-  max-width: 1352px;
+  max-width: 1552px;
   margin: 0 auto;
 }
 
@@ -30,6 +30,11 @@ h5 {
   li {
     float: left;
   }
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
 }
 
 @mixin breakpoint($device_or_width) {
