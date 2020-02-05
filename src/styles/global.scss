@@ -2,7 +2,7 @@
 
 $break-small: 320px;
 $break-large: 1200px;
-$padding-spacing: 1rem;
+$padding-spacing: 3rem;
 
 // Utilities and Breakpoints
 
@@ -50,15 +50,18 @@ $padding-spacing: 1rem;
 //Defaults
 
 html {
+  background-color: #f6f6f6;
+
   font-size: 80%;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   @include breakpoint(large) {
     font-size: 100%;
   }
 }
 
 .master-container {
-  max-width: 1552px;
+  max-width: 1852px;
   margin: 0 auto;
   padding: 0 $padding-spacing 0 $padding-spacing;
 }
