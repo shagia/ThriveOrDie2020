@@ -3,22 +3,12 @@ import { useStaticQuery, Link, graphql } from "gatsby"
 import HeroContainer from "./heroContainer"
 import "../styles/layout.scss"
 import "../styles/global.scss"
+import HeaderMenu from "../components/headerMenu"
 
 export default ({ children }) => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `
-  )
-
   return (
-    <div>
+    <div className="master-container">
+      <HeaderMenu></HeaderMenu>
       <div>
         <HeroContainer></HeroContainer>
       </div>
@@ -26,3 +16,14 @@ export default ({ children }) => {
     </div>
   )
 }
+
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+      }
+    }
+  }
+`

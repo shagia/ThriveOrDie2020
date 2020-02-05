@@ -1,3 +1,4 @@
+const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -13,6 +14,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   // this returns a promise, dont worry
+  const { createPage } = actions
   const result = await graphql(`
     query {
       allMarkdownRemark {
@@ -26,5 +28,14 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/components/artistLayout.js`),
+      context: {
+        slug: node.fields.slug,
+      },
+    })
+  })
   console.log(JSON.stringify(result, null, 4))
 }
