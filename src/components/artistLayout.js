@@ -12,7 +12,10 @@ export default ({ children, data }) => {
     <div className="master-container">
       <HeaderMenu></HeaderMenu>
       <div>
-        <HeroContainer artistName={post.frontmatter.title}></HeroContainer>
+        <HeroContainer
+          artistBio={post.rawMarkdownBody}
+          artistName={post.frontmatter.title}
+        ></HeroContainer>
       </div>
       {children}
     </div>
@@ -23,6 +26,7 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      rawMarkdownBody
       frontmatter {
         title
       }

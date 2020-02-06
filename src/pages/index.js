@@ -4,10 +4,13 @@ import HomeLayout from "../components/homeLayout"
 import TimelineItem from "../components/timelineItem"
 
 export default ({ data }) => {
+  console.log(data)
   return (
     <div>
       {/* consider using two layouts at this point */}
-      <HomeLayout>
+      <HomeLayout homeData={data.allFile.edges[0]}>
+        {" "}
+        {/* gotta send the front page data */}
         <small
           style={{ padding: "1rem", textAlign: "center", display: "block" }}
         >
@@ -48,6 +51,24 @@ export const query = graphql`
             slug
           }
           excerpt
+        }
+      }
+    }
+    allFile(
+      filter: { relativeDirectory: { eq: "data/releases" } }
+      sort: { fields: childMarkdownRemark___frontmatter___date, order: DESC }
+      limit: 1
+    ) {
+      edges {
+        node {
+          childMarkdownRemark {
+            html
+            frontmatter {
+              artists
+              artwork
+              title
+            }
+          }
         }
       }
     }

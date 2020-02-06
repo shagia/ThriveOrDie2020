@@ -2,9 +2,11 @@
 title: "FOXSKY"
 
 hometown: "California"
-artists: "FOXSKY"
 artwork: "ff"
 tags: "foxsky"
+contact: "foxskymusic@gmail.com"
+social.twitter: "MrFoxsky"
+social.soundcloud: "foxsky"
 ---
 
 TAMAGOTCHIS
