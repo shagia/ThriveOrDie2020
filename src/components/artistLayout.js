@@ -5,14 +5,27 @@ import "../styles/layout.scss"
 import "../styles/global.scss"
 import HeaderMenu from "../components/headerMenu"
 
-export default ({ children }) => {
+export default ({ children, data }) => {
+  const post = data.markdownRemark
+  console.log(post)
   return (
     <div className="master-container">
       <HeaderMenu></HeaderMenu>
       <div>
-        <HeroContainer></HeroContainer>
+        <HeroContainer artistName={post.frontmatter.title}></HeroContainer>
       </div>
       {children}
     </div>
   )
 }
+
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+      }
+    }
+  }
+`
