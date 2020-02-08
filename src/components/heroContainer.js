@@ -3,6 +3,45 @@ import { useStaticQuery, Link, graphql } from "gatsby"
 import "../styles/layout.scss"
 import "../styles/global.scss"
 import "../styles/hero.scss"
+import { FaEnvelope, FaTwitter, FaSoundcloud } from "react-icons/fa"
+
+let makeSocials = socialObj => {
+  console.log(socialObj)
+  return (
+    <ul>
+      {socialObj.email ? (
+        <li>
+          <a target="_blank" href={"mailto:" + socialObj.email}>
+            <FaEnvelope />
+          </a>
+        </li>
+      ) : (
+        ""
+      )}{" "}
+      {socialObj.twitter ? (
+        <li>
+          <a target="_blank" href={"https://twitter.com/" + socialObj.twitter}>
+            <FaTwitter />
+          </a>
+        </li>
+      ) : (
+        ""
+      )}{" "}
+      {socialObj.soundcloud ? (
+        <li>
+          <a
+            target="_blank"
+            href={"https://soundcloud.com/" + socialObj.soundcloud}
+          >
+            <FaSoundcloud />
+          </a>
+        </li>
+      ) : (
+        ""
+      )}
+    </ul>
+  )
+}
 
 const Hero = props => {
   return (
@@ -23,9 +62,7 @@ const Hero = props => {
           </h1>
           {props.artistObj ? (
             <nav className="social-bar nav-hor">
-              <ul>
-                <li>{props.artistObj.socials.twitter}</li>
-              </ul>
+              {makeSocials(props.artistObj.socials)}
             </nav>
           ) : (
             <div>hi</div>
