@@ -57,7 +57,7 @@ export const query = graphql`
     allFile(
       filter: { relativeDirectory: { eq: "data/releases" } }
       sort: { fields: childMarkdownRemark___frontmatter___date, order: DESC }
-      limit: 1
+      limit: 10
     ) {
       edges {
         node {
