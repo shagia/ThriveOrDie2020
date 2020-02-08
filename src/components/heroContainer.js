@@ -4,13 +4,6 @@ import "../styles/layout.scss"
 import "../styles/global.scss"
 import "../styles/hero.scss"
 
-const markDown = text => {
-  if (text) {
-    //Here I replace special chars for html tags, this is the example: __ Text in bold __
-    return text.replace(/__(.*?)__((_+|\W+|$))/g, "<strong>$1</strong>$2")
-  }
-}
-
 const Hero = props => {
   return (
     <div className="hero-container">
@@ -28,26 +21,15 @@ const Hero = props => {
               ? props.artistObj.frontmatter.title
               : "THRIVE OR DIE"}
           </h1>
-          <nav className="social-bar nav-hor">
-            {/* will need to iterate through available socials, max ? */}
-            {/* <ul>
-              <li>
-                <a href>Twitter</a>
-              </li>
-              <li>
-                <a href>Twitter</a>
-              </li>
-              <li>
-                <a href>Twitter</a>
-              </li>
-              <li>
-                <a href>Twitter</a>
-              </li>
-              <li>
-                <a href>Twitter</a>
-              </li>
-            </ul> */}
-          </nav>
+          {props.artistObj ? (
+            <nav className="social-bar nav-hor">
+              <ul>
+                <li>{props.artistObj.frontmatter.social_twitter}</li>
+              </ul>
+            </nav>
+          ) : (
+            <div>hi</div>
+          )}
         </div>
         {props.artistObj ? (
           <div className="head-bio">
