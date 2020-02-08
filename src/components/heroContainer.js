@@ -23,10 +23,14 @@ const Hero = props => {
       </div>
       <div className="hero-detail-container">
         <div className="head-title-social">
-          <h1>{props.artistName ? props.artistName : "THRIVE OR DIE"}</h1>
+          <h1>
+            {props.artistObj //if the artist object exists, render its title otherwise default title
+              ? props.artistObj.frontmatter.title
+              : "THRIVE OR DIE"}
+          </h1>
           <nav className="social-bar nav-hor">
             {/* will need to iterate through available socials, max ? */}
-            <ul>
+            {/* <ul>
               <li>
                 <a href>Twitter</a>
               </li>
@@ -42,12 +46,12 @@ const Hero = props => {
               <li>
                 <a href>Twitter</a>
               </li>
-            </ul>
+            </ul> */}
           </nav>
         </div>
-        {props.artistBio ? (
+        {props.artistObj ? (
           <div className="head-bio">
-            <div>{props.artistBio}</div>
+            <div>{props.artistObj.rawMarkdownBody}</div>
           </div>
         ) : (
           // Here's the data! sigh

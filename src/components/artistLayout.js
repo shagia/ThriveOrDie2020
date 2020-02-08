@@ -12,10 +12,7 @@ export default ({ children, data }) => {
     <div className="master-container">
       <HeaderMenu></HeaderMenu>
       <div>
-        <HeroContainer
-          artistBio={post.rawMarkdownBody}
-          artistName={post.frontmatter.title}
-        ></HeroContainer>
+        <HeroContainer artistObj={post}></HeroContainer>
       </div>
       {children}
     </div>
@@ -29,6 +26,12 @@ export const query = graphql`
       rawMarkdownBody
       frontmatter {
         title
+        tags
+        social_twitter
+        social_soundcloud
+        hometown
+        contact
+        artwork
       }
     }
   }
