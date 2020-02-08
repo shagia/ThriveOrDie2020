@@ -5,7 +5,7 @@ import "../styles/layout.scss"
 import "../styles/global.scss"
 import HeaderMenu from "../components/headerMenu"
 
-export default ({ children, data }) => {
+export default ({ data }) => {
   const post = data.artistsJson
   console.log(post)
   return (
@@ -14,7 +14,36 @@ export default ({ children, data }) => {
       <div>
         <HeroContainer artistObj={post}></HeroContainer>
       </div>
-      {children}
+      <div className="releases-container">
+        <h3>RELEASES</h3>
+        <div className="releases-layout">
+          <a className="release-anchor">
+            <div className="release-overlay">Test</div>
+            <div>
+              <img
+                alt="Release art"
+                className="release-art-src"
+                src="https://picsum.photos/1200"
+              ></img>
+            </div>
+          </a>
+          <a className="release-anchor">
+            <div className="release-overlay">
+              <div>Teffst</div>
+            </div>
+            <div>
+              <img
+                alt="Release art"
+                className="release-art-src"
+                src="https://picsum.photos/1200"
+              ></img>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3>FEATURES & INTERVIEWS</h3>
+      </div>
     </div>
   )
 }

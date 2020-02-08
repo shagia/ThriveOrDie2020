@@ -4,6 +4,7 @@ import "../styles/layout.scss"
 import "../styles/global.scss"
 import "../styles/hero.scss"
 import { FaEnvelope, FaTwitter, FaSoundcloud } from "react-icons/fa"
+//may need to make a socials component soon
 
 let makeSocials = socialObj => {
   console.log(socialObj)
@@ -70,6 +71,7 @@ const Hero = props => {
         </div>
         {props.artistObj ? (
           <div className="head-bio">
+            <h3>BIO</h3>
             <div>{props.artistObj.bio}</div>
           </div>
         ) : (
