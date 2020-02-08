@@ -18,13 +18,13 @@ const Hero = props => {
         <div className="head-title-social">
           <h1>
             {props.artistObj //if the artist object exists, render its title otherwise default title
-              ? props.artistObj.frontmatter.title
+              ? props.artistObj.title
               : "THRIVE OR DIE"}
           </h1>
           {props.artistObj ? (
             <nav className="social-bar nav-hor">
               <ul>
-                <li>{props.artistObj.frontmatter.social_twitter}</li>
+                <li>{props.artistObj.socials.twitter}</li>
               </ul>
             </nav>
           ) : (
@@ -33,7 +33,7 @@ const Hero = props => {
         </div>
         {props.artistObj ? (
           <div className="head-bio">
-            <div>{props.artistObj.rawMarkdownBody}</div>
+            <div>{props.artistObj.bio}</div>
           </div>
         ) : (
           // Here's the data! sigh

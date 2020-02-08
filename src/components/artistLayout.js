@@ -6,7 +6,7 @@ import "../styles/global.scss"
 import HeaderMenu from "../components/headerMenu"
 
 export default ({ children, data }) => {
-  const post = data.markdownRemark
+  const post = data.artistsJson
   console.log(post)
   return (
     <div className="master-container">
@@ -21,18 +21,17 @@ export default ({ children, data }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      rawMarkdownBody
-      frontmatter {
-        title
-        tags
-        social_twitter
-        social_soundcloud
-        hometown
-        contact
-        artwork
+    artistsJson(fields: { slug: { eq: $slug } }) {
+      bio
+      title
+      tags
+      socials {
+        email
+        twitter
+        soundcloud
       }
+      hometown
+      artwork
     }
   }
 `

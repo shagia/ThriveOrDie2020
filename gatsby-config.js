@@ -11,6 +11,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,6 +19,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+
     {
       resolve: `gatsby-plugin-typography`,
       options: {
