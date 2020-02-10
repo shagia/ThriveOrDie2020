@@ -60,7 +60,11 @@ const Hero = props => {
         <img
           alt="Replace me!"
           className="hero-img-src"
-          src="https://picsum.photos/1200"
+          src={
+            props.artistObj
+              ? props.artistObj.artwork
+              : props.headRelease.childMarkdownRemark.frontmatter.artwork
+          }
         ></img>
       </div>
       <div className="hero-detail-container">

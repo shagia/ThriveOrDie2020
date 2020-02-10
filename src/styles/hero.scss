@@ -16,10 +16,11 @@
   object-fit: cover;
   object-position: center top;
   @include breakpoint(small) {
-    width: 90%;
+    width: 20rem;
     height: 402px;
     object-fit: cover;
     object-position: center top;
+    margin-right: 2.5rem;
   }
 }
 

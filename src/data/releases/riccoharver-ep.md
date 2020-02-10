@@ -3,7 +3,7 @@ title: "FALSE PROPHET"
 date: "2021-02-21"
 
 artists: "FRAX X RICCO"
-artwork: "ff"
+artwork: "https://picsum.photos/1200"
 tags: "frax, ricco"
 ---
 
