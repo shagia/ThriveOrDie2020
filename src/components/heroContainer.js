@@ -12,7 +12,11 @@ let makeSocials = socialObj => {
     <ul>
       {socialObj.email ? (
         <li>
-          <a target="_blank" href={"mailto:" + socialObj.email}>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href={"mailto:" + socialObj.email}
+          >
             <FaEnvelope />
           </a>
         </li>
@@ -21,7 +25,11 @@ let makeSocials = socialObj => {
       )}{" "}
       {socialObj.twitter ? (
         <li>
-          <a target="_blank" href={"https://twitter.com/" + socialObj.twitter}>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href={"https://twitter.com/" + socialObj.twitter}
+          >
             <FaTwitter />
           </a>
         </li>
@@ -31,6 +39,7 @@ let makeSocials = socialObj => {
       {socialObj.soundcloud ? (
         <li>
           <a
+            rel="noopener noreferrer"
             target="_blank"
             href={"https://soundcloud.com/" + socialObj.soundcloud}
           >
@@ -66,7 +75,11 @@ const Hero = props => {
               {makeSocials(props.artistObj.socials)}
             </nav>
           ) : (
-            <div>hi</div>
+            <h3
+              dangerouslySetInnerHTML={{
+                __html: `${props.headRelease.childMarkdownRemark.frontmatter.artists} - ${props.headRelease.childMarkdownRemark.frontmatter.title}`,
+              }}
+            ></h3>
           )}
         </div>
         {props.artistObj ? (
@@ -76,7 +89,7 @@ const Hero = props => {
           </div>
         ) : (
           // Here's the data! sigh
-          <div>
+          <div className="head-bio">
             <small>~~latest release~~</small>
             <br></br>
             <div
