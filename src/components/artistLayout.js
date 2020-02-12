@@ -8,7 +8,7 @@ import HeaderMenu from "../components/headerMenu"
 export default ({ data }) => {
   const post = data.artistsJson
   const postImg = data.allFile.edges[0].node.childImageSharp
-  console.log(post)
+  //console.log(post)
   console.log(postImg)
   return (
     <div className="master-container">
@@ -64,7 +64,9 @@ export const query = graphql`
       hometown
       artwork
     }
-    allFile(filter: { name: { eq: $slug } }) {
+    allFile(
+      filter: { name: { eq: $slug }, relativeDirectory: { eq: "artists" } }
+    ) {
       edges {
         node {
           childImageSharp {
