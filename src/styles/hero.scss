@@ -10,13 +10,21 @@
   }
 }
 
+.hero-img-container {
+  flex: 2;
+  max-width: 19rem;
+}
+
+.hero-detail-container {
+  flex: 1;
+}
+
 .hero-img-src {
   width: 100%;
   height: 402px;
   object-fit: cover;
   object-position: center top;
   @include breakpoint(small) {
-    width: 20rem;
     height: 402px;
     object-fit: cover;
     object-position: center top;
@@ -34,8 +42,8 @@
 }
 
 .head-bio {
-  max-width: 40rem;
-  padding-top: 1rem;
+  max-width: 60rem;
+  padding: 1rem 1rem 0 1rem;
   @include breakpoint(small) {
     padding-top: 1rem;
   }

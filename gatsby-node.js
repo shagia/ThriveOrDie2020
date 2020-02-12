@@ -7,7 +7,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value: slug.substring(1, slug.length - 1),
     })
   }
 }

@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 import "../styles/layout.scss"
 import "../styles/global.scss"
 import "../styles/hero.scss"
@@ -57,15 +58,27 @@ const Hero = props => {
   return (
     <div className="hero-container">
       <div className="hero-img-container">
-        <img
-          alt="Replace me!"
-          className="hero-img-src"
-          src={
-            props.artistObj
-              ? props.artistObj.artwork
-              : props.headRelease.childMarkdownRemark.frontmatter.artwork
-          }
-        ></img>
+        {props.artistObj ? (
+          <div
+            className="hero-img-src"
+            style={{
+              // finally, we use multiple background images to load the
+              // fast SVG first, and then when the full image loads
+              // it takes over
+              backgroundImage: `url("${props.artistImg.fluid.src}"), url("${props.artistImg.fluid.tracedSVG}")`,
+              backgroundPosition: "center center",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              width: "100%",
+            }}
+          />
+        ) : (
+          <img
+            alt="Replace me!"
+            className="hero-img-src"
+            src={props.headRelease.childMarkdownRemark.frontmatter.artwork}
+          ></img>
+        )}
       </div>
       <div className="hero-detail-container">
         <div className="head-title-social">

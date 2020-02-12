@@ -7,12 +7,14 @@ import HeaderMenu from "../components/headerMenu"
 
 export default ({ data }) => {
   const post = data.artistsJson
+  const postImg = data.allFile.edges[0].node.childImageSharp
   console.log(post)
+  console.log(postImg)
   return (
     <div className="master-container">
       <HeaderMenu></HeaderMenu>
       <div>
-        <HeroContainer artistObj={post}></HeroContainer>
+        <HeroContainer artistImg={postImg} artistObj={post}></HeroContainer>
       </div>
       <div className="releases-container">
         <h3>RELEASES</h3>
@@ -61,6 +63,20 @@ export const query = graphql`
       }
       hometown
       artwork
+    }
+    allFile(filter: { name: { eq: $slug } }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid {
+              src
+              base64
+              tracedSVG
+            }
+          }
+          name
+        }
+      }
     }
   }
 `
