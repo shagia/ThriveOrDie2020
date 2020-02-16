@@ -6,25 +6,6 @@ $padding-spacing: 3rem;
 
 // Utilities and Breakpoints
 
-.release-anchor {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: stretch;
-}
-.release-art-src {
-  width: 223px;
-  height: 223px;
-  object-fit: cover;
-  object-position: center top;
-}
-
-.release-overlay {
-  position: absolute;
-}
-
 .nav-hor {
   ul {
     list-style-type: none;

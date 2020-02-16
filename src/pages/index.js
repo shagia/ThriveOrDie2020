@@ -37,35 +37,18 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          excerpt
-        }
-      }
-    }
-    allFile(
-      filter: { relativeDirectory: { eq: "data/releases" } }
-      sort: { fields: childMarkdownRemark___frontmatter___date, order: DESC }
-      limit: 10
+  query($slug: String!) {
+    allReleasesJson(
+      sort: { order: DESC, fields: date }
+      filter: { tags: { eq: $slug } }
     ) {
       edges {
         node {
-          childMarkdownRemark {
-            html
-            frontmatter {
-              artists
-              artwork
-              title
-            }
-          }
+          artwork
+          title
+          artists
+          date(formatString: "YYYY")
+          id
         }
       }
     }

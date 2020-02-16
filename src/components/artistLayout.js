@@ -4,12 +4,15 @@ import HeroContainer from "./heroContainer"
 import "../styles/layout.scss"
 import "../styles/global.scss"
 import HeaderMenu from "../components/headerMenu"
+import ReleaseContainer from "../components/releaseContainer"
 
 export default ({ data }) => {
   const post = data.artistsJson
   const postImg = data.allFile.edges[0].node.childImageSharp
+  const releaseData = data.allReleasesJson.edges
   //console.log(post)
   console.log(postImg)
+  console.log(releaseData)
   return (
     <div className="master-container">
       <HeaderMenu></HeaderMenu>
@@ -18,30 +21,7 @@ export default ({ data }) => {
       </div>
       <div className="releases-container">
         <h3>RELEASES</h3>
-        <div className="releases-layout">
-          <a className="release-anchor">
-            <div className="release-overlay">Test</div>
-            <div>
-              <img
-                alt="Release art"
-                className="release-art-src"
-                src="https://picsum.photos/1200"
-              ></img>
-            </div>
-          </a>
-          <a className="release-anchor">
-            <div className="release-overlay">
-              <div>Teffst</div>
-            </div>
-            <div>
-              <img
-                alt="Release art"
-                className="release-art-src"
-                src="https://picsum.photos/1200"
-              ></img>
-            </div>
-          </a>
-        </div>
+        <ReleaseContainer releasesData={releaseData} />
       </div>
       <div>
         <h3>FEATURES & INTERVIEWS</h3>
@@ -77,6 +57,20 @@ export const query = graphql`
             }
           }
           name
+        }
+      }
+    }
+    allReleasesJson(
+      sort: { order: DESC, fields: date }
+      filter: { tags: { eq: $slug } }
+    ) {
+      edges {
+        node {
+          artwork
+          title
+          artists
+          date(formatString: "YYYY")
+          id
         }
       }
     }
