@@ -3,6 +3,7 @@
 .releases-layout {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 .release-anchor {
   position: relative;

@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import "../styles/interviewContainer.scss"
 
 const InterviewContainer = ({ interviewData }) => {
@@ -7,10 +8,9 @@ const InterviewContainer = ({ interviewData }) => {
     <div className="interview-layout">
       {interviewData.map(({ node }) => (
         <div className="interview-item" key={node.id}>
-          <a className="interview-anchor">
+          <Link to={node.fields.slug} className="interview-anchor">
             <div className="interview-overlay">
-              <div>{node.frontmatter.artists}</div>
-              <div>{node.frontmatter.title}</div>
+              <div className="overlay-content">{node.frontmatter.title}</div>
             </div>
             <div>
               <img
@@ -19,7 +19,7 @@ const InterviewContainer = ({ interviewData }) => {
                 src={node.frontmatter.artwork}
               ></img>
             </div>
-          </a>
+          </Link>
         </div>
       ))}
     </div>

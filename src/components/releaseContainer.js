@@ -9,8 +9,10 @@ const Release = ({ releasesData }) => {
         <div className="release-item" key={node.id}>
           <a className="release-anchor">
             <div className="release-overlay">
-              <div>{node.artists}</div>
-              <div>{node.title}</div>
+              <div className="overlay-content">
+                <div>{node.artists}</div>
+                <div>{node.title}</div>
+              </div>
             </div>
             <div>
               <img

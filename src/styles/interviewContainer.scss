@@ -1,8 +1,9 @@
 @import "./global.scss";
 
-.interviews-layout {
+.interview-layout {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 .interview-anchor {
   position: relative;
@@ -11,10 +12,10 @@
   width: 100%;
 }
 .interview-art-src {
-  width: 223px;
+  width: 100%;
   height: 223px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center middle;
   padding: 0;
   margin: 0;
 }
@@ -40,6 +41,10 @@
 }
 
 .interview-item {
+  flex: 100%;
   display: inline;
   padding: 0 1.2rem 0 0;
+  @include breakpoint(small) {
+    flex: 50%;
+  }
 }
