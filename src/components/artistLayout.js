@@ -5,14 +5,17 @@ import "../styles/layout.scss"
 import "../styles/global.scss"
 import HeaderMenu from "../components/headerMenu"
 import ReleaseContainer from "../components/releaseContainer"
+import InterviewContainer from "../components/interviewContainer"
 
 export default ({ data }) => {
   const post = data.artistsJson
   const postImg = data.allFile.edges[0].node.childImageSharp
   const releaseData = data.allReleasesJson.edges
+  const interviewData = data.allMarkdownRemark.edges
   //console.log(post)
   console.log(postImg)
   console.log(releaseData)
+  console.log(interviewData)
   return (
     <div className="master-container">
       <HeaderMenu></HeaderMenu>
@@ -23,8 +26,9 @@ export default ({ data }) => {
         <h3>RELEASES</h3>
         <ReleaseContainer releasesData={releaseData} />
       </div>
-      <div>
+      <div className="interviews-container">
         <h3>FEATURES & INTERVIEWS</h3>
+        <InterviewContainer interviewData={interviewData} />
       </div>
     </div>
   )
@@ -71,6 +75,23 @@ export const query = graphql`
           artists
           date(formatString: "YYYY")
           id
+        }
+      }
+    }
+    allMarkdownRemark(
+      filter: { frontmatter: { tags: { eq: $slug } } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date
+            author
+            artwork
+            tags
+          }
         }
       }
     }
