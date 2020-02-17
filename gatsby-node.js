@@ -10,6 +10,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: slug.substring(1, slug.length - 1),
     })
   }
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages/interviews` })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: "feature/" + slug.substring(1, slug.length - 1),
+    })
+  }
 }
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -26,12 +34,30 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
     }
   `)
   result.data.allArtistsJson.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
       component: path.resolve(`./src/components/artistLayout.js`),
+      context: {
+        slug: node.fields.slug,
+      },
+    })
+  })
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/components/interviewPage.js`),
       context: {
         slug: node.fields.slug,
       },
