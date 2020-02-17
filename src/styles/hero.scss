@@ -33,6 +33,10 @@
 }
 
 .head-title-social {
+  * {
+    color: white;
+  }
+  mix-blend-mode: exclusion;
   font-size: 2.2rem;
   display: inline-block;
   position: relative;
@@ -43,13 +47,16 @@
 
 .head-bio {
   max-width: 60rem;
-  padding: 1rem 0rem 0 0rem;
+  padding: 0rem 0rem 0 0rem;
   @include breakpoint(small) {
-    padding: 1rem 1rem 0 1rem;
+    padding: 0rem 1rem 0 1rem;
   }
 }
 
 .social-bar li {
   padding: 0;
   margin: 0;
+  a {
+    padding: 0 1rem 0 0;
+  }
 }
