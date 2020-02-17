@@ -1,5 +1,6 @@
 import React from "react"
 import "../styles/releaseContainer.scss"
+import "../styles/global.scss"
 
 const Release = ({ releasesData }) => {
   console.log(releasesData)
@@ -12,6 +13,9 @@ const Release = ({ releasesData }) => {
               <div className="overlay-content">
                 <div>{node.artists}</div>
                 <div>{node.title}</div>
+                <a href="google.com" className="tod-button">
+                  Stream / Download
+                </a>
               </div>
             </div>
             <div>
