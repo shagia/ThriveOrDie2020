@@ -16,18 +16,5 @@ export default () => {
     `
   )
 
-  return (
-    <div className="item-container">
-      <div className="img-container">
-        <img
-          src="https://picsum.photos/1200"
-          alt="timeline img"
-          className="img-fluid img-tl-lg"
-        ></img>
-      </div>
-      <div className="item-article">
-        <h2>ARTIST - TITLE</h2>
-      </div>
-    </div>
-  )
+  return <div>.</div>
 }

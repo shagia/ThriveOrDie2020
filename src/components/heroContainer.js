@@ -92,11 +92,11 @@ const Hero = props => {
               {makeSocials(props.artistObj.socials)}
             </nav>
           ) : (
-            <h3
+            <h2
               dangerouslySetInnerHTML={{
                 __html: `${props.headRelease.artists} - ${props.headRelease.title}`,
               }}
-            ></h3>
+            ></h2>
           )}
         </div>
         {props.artistObj ? (

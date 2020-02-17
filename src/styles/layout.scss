@@ -1,1 +1,24 @@
 @import "./global.scss";
+.img-tl-lg {
+  width: 35rem;
+  height: 18rem;
+  object-fit: cover;
+  object-position: center bottom;
+}
+.item-container {
+  text-align: center;
+  max-width: 35rem;
+}
+
+.item-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .item-container {
+    margin: 0 auto;
+    padding: 0 0 3.8rem 0;
+  }
+}
+
+.item-article {
+}
