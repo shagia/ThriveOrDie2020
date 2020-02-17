@@ -3,12 +3,12 @@ import { Link, graphql } from "gatsby"
 import HomeLayout from "../components/homeLayout"
 import TimelineItem from "../components/timelineItem"
 
-export default ({ data }) => {
+export default ({ data, i }) => {
   console.log(data)
   return (
     <div>
       {/* consider using two layouts at this point */}
-      <HomeLayout homeData={data.allFile.edges[0]}>
+      <HomeLayout homeData={data.allReleasesJson.edges[0]}>
         {" "}
         {/* gotta send the front page data */}
         <small
@@ -18,17 +18,8 @@ export default ({ data }) => {
         </small>
         <TimelineItem></TimelineItem>
         <div>
-          <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-          {data.allMarkdownRemark.edges.map(({ node }) => (
-            <div key={node.id}>
-              <Link>
-                <h3>
-                  {node.frontmatter.title}{" "}
-                  <span>— {node.frontmatter.date}</span>
-                </h3>
-                <p>{node.excerpt}</p>
-              </Link>
-            </div>
+          {data.allReleasesJson.edges.slice(1).map(({ node }) => (
+            <div key={node.id[i]}>test</div>
           ))}
         </div>
       </HomeLayout>
@@ -37,11 +28,8 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
-    allReleasesJson(
-      sort: { order: DESC, fields: date }
-      filter: { tags: { eq: $slug } }
-    ) {
+  query {
+    allReleasesJson(sort: { order: DESC, fields: date }, filter: {}) {
       edges {
         node {
           artwork
@@ -49,6 +37,7 @@ export const query = graphql`
           artists
           date(formatString: "YYYY")
           id
+          desc
         }
       }
     }

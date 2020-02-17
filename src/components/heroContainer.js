@@ -76,7 +76,7 @@ const Hero = props => {
           <img
             alt="Replace me!"
             className="hero-img-src"
-            src={props.headRelease.childMarkdownRemark.frontmatter.artwork}
+            src={props.headRelease.artwork}
           ></img>
         )}
       </div>
@@ -94,7 +94,7 @@ const Hero = props => {
           ) : (
             <h3
               dangerouslySetInnerHTML={{
-                __html: `${props.headRelease.childMarkdownRemark.frontmatter.artists} - ${props.headRelease.childMarkdownRemark.frontmatter.title}`,
+                __html: `${props.headRelease.artists} - ${props.headRelease.title}`,
               }}
             ></h3>
           )}
@@ -111,7 +111,7 @@ const Hero = props => {
             <br></br>
             <div
               dangerouslySetInnerHTML={{
-                __html: props.headRelease.childMarkdownRemark.html,
+                __html: props.headRelease.desc,
               }}
             ></div>
           </div>
