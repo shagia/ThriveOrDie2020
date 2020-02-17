@@ -20,11 +20,18 @@
   margin: 0;
 }
 
+.overlay-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .release-overlay {
   top: 0;
   left: 0;
   position: absolute;
-  height: 100%;
+  padding: 0 1rem 0 1rem;
+  height: 96.8%;
   width: 100%;
   display: block;
 
