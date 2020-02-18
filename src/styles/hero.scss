@@ -10,6 +10,41 @@
   }
 }
 
+.hero-container-no-flex {
+  .hero-img-src-interview {
+  }
+  .hero-img-container {
+    max-width: 100%;
+  }
+  .hero-detail-container {
+    display: flex; //it's a quick fix to make the title stop wrapping! whatever for now
+    justify-content: center;
+  }
+  .head-title-social {
+    display: block;
+    left: -5px;
+    text-align: center;
+    h1 {
+      font-size: 90%;
+    }
+  }
+  @include breakpoint(small) {
+    .hero-img-src-interview {
+      float: left;
+    }
+    .hero-img-container {
+      max-width: 19rem;
+      float: left;
+      margin-right: 1rem;
+    }
+    .hero-detail-container {
+    }
+    .head-title-social {
+      display: block;
+    }
+  }
+}
+
 .hero-img-container {
   flex: 2;
   max-width: 19rem;
@@ -27,8 +62,20 @@
   @include breakpoint(small) {
     height: 402px;
     object-fit: cover;
+    object-position: center top8;
+  }
+}
+
+.hero-img-src-interview {
+  width: 100%;
+  height: 402px;
+  object-fit: cover;
+  object-position: center top;
+  @include breakpoint(small) {
+    height: 402px;
+    object-fit: cover;
     object-position: center top;
-    margin-right: 2.5rem;
+    margin-right: 0.8rem;
   }
 }
 
