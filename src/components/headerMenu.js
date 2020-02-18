@@ -18,7 +18,9 @@ export default () => {
               <li>
                 <Link to={`/`}>HOME</Link>
               </li>
-              <li>ARTISTS</li>
+              <li>
+                <Link to={`/artists/`}>ARTISTS</Link>
+              </li>
               <li>
                 <Link to={`/contact/`}>CONTACT</Link>
               </li>

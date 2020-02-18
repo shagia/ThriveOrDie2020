@@ -75,6 +75,7 @@ export const query = graphql`
           artists
           date(formatString: "YYYY")
           id
+          link
         }
       }
     }

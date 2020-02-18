@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import HomeLayout from "../components/homeLayout"
 
-export default ({ data, i }) => {
+export default ({ data }) => {
   console.log(data)
   return (
     <div>

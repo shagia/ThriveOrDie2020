@@ -8,12 +8,17 @@ const Release = ({ releasesData }) => {
     <div className="releases-layout">
       {releasesData.map(({ node }) => (
         <div className="release-item" key={node.id}>
-          <a className="release-anchor">
+          <div className="release-anchor">
             <div className="release-overlay">
               <div className="overlay-content">
                 <div>{node.artists}</div>
                 <div>{node.title}</div>
-                <a href="google.com" className="tod-button">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={node.link}
+                  className="tod-button"
+                >
                   Stream / Download
                 </a>
               </div>
@@ -25,7 +30,7 @@ const Release = ({ releasesData }) => {
                 src={node.artwork}
               ></img>
             </div>
-          </a>
+          </div>
         </div>
       ))}
     </div>
