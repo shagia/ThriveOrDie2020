@@ -2,6 +2,7 @@ import React from "react"
 import "../styles/menu.scss"
 import "../styles/global.scss"
 import { Link } from "gatsby"
+import logo from "../../static/logo.png"
 
 export default () => {
   return (
@@ -12,7 +13,7 @@ export default () => {
             <ul>
               <li>
                 <div className="logo-container">
-                  <Link to={`/`}>LOGO</Link>
+                  <Link to={`/`}><img className="logo-img-src" src={logo}></img></Link>
                 </div>
               </li>
               <li>
