@@ -25,7 +25,7 @@ export default () => {
               <Link to={`/contact/`}>CONTACT</Link>
             </li>
           </ul>
-          <div className="load">LOADING</div>
+          {/* <div className="load">LOADING</div> */}
         </nav>
       </header>
     </div>

@@ -85,10 +85,20 @@ html {
   }
 }
 
+
 .master-container {
   max-width: 1852px;
   margin: 0 auto;
   padding: 0 $padding-spacing 0 $padding-spacing;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover{
+  color: orange;
 }
 
 h1,
