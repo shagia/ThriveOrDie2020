@@ -1,24 +1,34 @@
 @import "./global.scss";
 .img-tl-lg {
   width: 35rem;
-  height: 18rem;
+  height: 13rem;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center center;
+  @include breakpoint(small){
+    width: 35rem;
+    height: 18rem;
+  }
 }
 .item-container {
   text-align: center;
   max-width: 35rem;
 }
 
-.item-root {
+.releases-timeline {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  .item-container:first-child{
+    padding-top: 0.5rem;
+  }
   .item-container {
     margin: 0 auto;
-    padding: 0 0 3.8rem 0;
+    padding: 0 0 2rem 0;
   }
 }
 
 .item-article {
+  h4 {
+    padding-top: 0.5rem;
+  }
 }

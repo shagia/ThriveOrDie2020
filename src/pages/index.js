@@ -15,7 +15,7 @@ export default ({ data }) => {
         >
           THRIVE
         </small>
-        <div className="item-root">
+        <div className="releases-timeline">
           {data.allReleasesJson.edges.slice(1).map(({ node }) => (
             <div key={node.id} className="item-container">
               <div className="img-container">
@@ -29,6 +29,14 @@ export default ({ data }) => {
                 <h4>
                   {node.artists} - {node.title}
                 </h4>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={node.link}
+                  className="tod-button-black button-wide"
+                >
+                  Stream / Download
+                </a>
               </div>
             </div>
           ))}
@@ -49,6 +57,7 @@ export const query = graphql`
           date(formatString: "YYYY")
           id
           desc
+          link
         }
       }
     }
