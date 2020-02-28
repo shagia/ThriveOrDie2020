@@ -38,8 +38,11 @@
   color: white;
   background-color: rgba(0, 0, 0, 0.521);
   text-align: center;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.2s;
+  @include breakpoint(small){
+    opacity: 0;
+  }
 }
 
 .release-overlay:hover {
