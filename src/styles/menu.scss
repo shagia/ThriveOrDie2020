@@ -19,6 +19,18 @@
   li {
     margin: 0 2.3rem 0 0rem;
     display: block;
+    padding: 5px;
+  }
+  li:not(.logo-container){
+    a{
+      padding: 0.4rem;
+      transition: all 0.2s;
+    }
+    a:hover{
+      transition: all 0.2s;
+      background-color: black;
+      color: white;
+    }
   }
 }
 
