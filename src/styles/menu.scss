@@ -8,25 +8,32 @@
 }
 
 .nav-items {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  @include breakpoint(small) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 .head-bar {
   padding: 1rem 0 2rem 0;
   li {
-    margin: 0 2.3rem 0 0rem;
+    margin: 0 0 0 0;
     display: block;
-    padding: 5px 5px 0 0;
+    padding: 5px 0 0 0;
+    @include breakpoint(small) {
+      margin: 0 2.3rem 0 0rem;
+      display: block;
+      padding: 5px 5px 0 0;
+    }
   }
-  li:not(.logo-container){
-    a{
+  li:not(.logo-container) {
+    a {
       padding: 0.4rem;
       transition: all 0.2s;
     }
-    a:hover{
+    a:hover {
       transition: all 0.2s;
       background-color: black;
       color: white;

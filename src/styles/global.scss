@@ -6,6 +6,31 @@ $padding-spacing: 3rem;
 
 // Utilities and Breakpoints
 
+@mixin breakpoint($device_or_width) {
+  // Stolen from my supervisor, Radames
+  @if $device_or_width == small {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $device_or_width == medium {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $device_or_width == large {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $device_or_width == extra-large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $device_or_width) {
+      @content;
+    }
+  }
+}
+
 .tod-button {
   display: inline-block;
   padding: 0.35em 1.2em;
@@ -53,7 +78,24 @@ img {
   margin: 0;
 }
 
-.nav-hor {
+.nav {
+  ul {
+    margin: 0 0 0 0;
+    @include breakpoint(small) {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  li {
+    display: block;
+    @include breakpoint(small) {
+      display: inline;
+    }
+  }
+}
+
+.social-nav {
   ul {
     list-style-type: none;
     margin: 0;
@@ -69,31 +111,6 @@ img {
   height: auto;
 }
 
-@mixin breakpoint($device_or_width) {
-  // Stolen from my supervisor, Radames
-  @if $device_or_width == small {
-    @media (min-width: 576px) {
-      @content;
-    }
-  } @else if $device_or_width == medium {
-    @media (min-width: 768px) {
-      @content;
-    }
-  } @else if $device_or_width == large {
-    @media (min-width: 992px) {
-      @content;
-    }
-  } @else if $device_or_width == extra-large {
-    @media (min-width: 1200px) {
-      @content;
-    }
-  } @else {
-    @media (min-width: $device_or_width) {
-      @content;
-    }
-  }
-}
-
 //Defaults
 
 html {
@@ -107,14 +124,13 @@ html {
   }
 }
 
-
 .master-container {
   max-width: 1852px;
   margin: 0 auto;
   padding: 0 $padding-spacing 0 $padding-spacing;
 }
 
-a{
+a {
   color: black;
   text-decoration: none;
   font-weight: 600;
@@ -134,4 +150,3 @@ h5 {
 h3 {
   padding: 1rem 0 1rem 0;
 }
-

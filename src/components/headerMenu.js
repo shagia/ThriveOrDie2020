@@ -8,12 +8,12 @@ export default () => {
   return (
     <div>
       <header className="site-head">
-        <nav className="nav-flex-container nav-hor head-bar">
+        <nav className="nav-flex-container nav head-bar">
+          {" "}
+          {/* flex for a later addition */}
           <ul className="nav-items">
             <li className="logo-container">
-              <Link to={`/`}>
-                <img className="logo-img-src" src={logo}></img>
-              </Link>
+              <img className="logo-img-src" src={logo}></img>
             </li>
             <li>
               <Link to={`/`}>HOME</Link>

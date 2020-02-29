@@ -88,7 +88,7 @@ const Hero = props => {
               : "THRIVE OR DIE"}
           </h1>
           {props.artistObj ? (
-            <nav className="social-bar nav-hor">
+            <nav className="social-bar social-nav">
               {makeSocials(props.artistObj.socials)}
             </nav>
           ) : (
