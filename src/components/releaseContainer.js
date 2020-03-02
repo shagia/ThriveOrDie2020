@@ -1,12 +1,13 @@
 import React from "react"
 import "../styles/releaseContainer.scss"
 import "../styles/global.scss"
+import failureIcon from "../../static/failure-icon.svg"
 
 const Release = ({ releasesData }) => {
   console.log(releasesData)
   return (
     <div className="releases-layout">
-      {releasesData.map(({ node }) => (
+      {!releasesData.length == 0 ? (releasesData.map(({ node }) => (
         <div className="release-item" key={node.id}>
           <div className="release-anchor">
             <div className="release-overlay">
@@ -31,8 +32,10 @@ const Release = ({ releasesData }) => {
               ></img>
             </div>
           </div>
-        </div>
-      ))}
+        </div>)
+      )) : (
+        <div className="no-entries-container"><img alt="Nothin' here to find..." className="no-entries-src" height="200rem" src={failureIcon}></img></div>
+      )}
     </div>
   )
 }

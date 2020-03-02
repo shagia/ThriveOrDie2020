@@ -114,6 +114,14 @@ const Hero = props => {
                 __html: props.headRelease.desc,
               }}
             ></div>
+            <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={props.headRelease.link}
+                  className="tod-button-black button-wide"
+                >
+                  Stream / Download
+                </a>
           </div>
         )}
       </div>
