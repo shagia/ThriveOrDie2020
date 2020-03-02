@@ -1,10 +1,8 @@
 import React from "react"
-import { useStaticQuery, Link, graphql } from "gatsby"
-import Img from "gatsby-image"
 import "../styles/layout.scss"
 import "../styles/global.scss"
 import "../styles/hero.scss"
-import { FaEnvelope, FaTwitter, FaSoundcloud, FaInstagram, FaFacebook, FaYoutube, FaBandcamp, FaFacebookSquare } from "react-icons/fa"
+import { FaEnvelope, FaTwitter, FaSoundcloud, FaInstagram, FaYoutube, FaBandcamp, FaFacebookSquare } from "react-icons/fa"
 //may need to make a socials component soon
 
 let makeSocials = socialObj => {

@@ -13,7 +13,7 @@ export default () => {
           {/* flex for a later addition */}
           <ul className="nav-items">
             <li className="logo-container">
-              <img className="logo-img-src" src={logo}></img>
+              <img alt="THRIVE OR DIE!!" className="logo-img-src" src={logo}></img>
             </li>
             <li>
               <Link to={`/`}>HOME</Link>

@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, Link, graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import HeaderMenu from "../components/headerMenu"
 import "../styles/releaseContainer.scss"
 import "../styles/layout.scss"
