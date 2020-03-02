@@ -1,16 +1,15 @@
 {
-    "title": "ALEX HELDT",
-    "imgdir": "",
-    "hometown": "",
-    "artwork": "/static/7dde83d69f664e238ed498cad6b124fc/14b42/alexh.jpg",
-    "tags": ["Alex Heldt"],
-    "socials": {
-      "email": "alexheldt@gmail.com",
-      "twitter": "alexheldtmusic",
-      "instagram": "alexheldtmusic",
-      "soundcloud": "alexheldt",
-      "bandcamp": ""
-    },
-    "bio": "Alex Heldt is not a human. Alex Heldt is an AI sourced robot that generates heavy, industrial, and minimal club tracks. It is constantly learning based on your data, so feed its algorithm."
-  }
-  
+  "title": "ALEX HELDT",
+  "imgdir": "",
+  "hometown": "",
+  "artwork": "/static/7dde83d69f664e238ed498cad6b124fc/14b42/alexh.jpg",
+  "tags": ["alexh"],
+  "socials": {
+    "email": "alexheldt@gmail.com",
+    "twitter": "alexheldtmusic",
+    "instagram": "alexheldtmusic",
+    "soundcloud": "alexheldt",
+    "bandcamp": ""
+  },
+  "bio": "Alex Heldt is not a human. Alex Heldt is an AI sourced robot that generates heavy, industrial, and minimal club tracks. It is constantly learning based on your data, so feed its algorithm."
+}
