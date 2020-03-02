@@ -10,7 +10,7 @@ export default ({ data }) => (
       <div>You can send us general inqueries, booking, demos, or just any random thoughts you have in mind. If you're sending demos, <b>please</b> submit under these guidelines:
       <ul>
       <li>
-          We take singles, EPs, and albums
+          We take <b>original</b> singles, EPs, and albums, <b>no uncleared samples</b>
       </li>
       <li>
           Name should be your artist name, Subject should be the song, EP or Album title, so when submitted your entry will look like: <b>Artist Name - Subject Title</b>
