@@ -3,6 +3,7 @@ import HeroContainer from "./heroContainer"
 import "../styles/layout.scss"
 import "../styles/global.scss"
 import HeaderMenu from "../components/headerMenu"
+import Footer from "../components/footerComponent"
 import { SEO } from "gatsby-plugin-seo"
 
 const homeLayout = ({ children, homeData }) => {
@@ -28,6 +29,7 @@ const homeLayout = ({ children, homeData }) => {
         <HeroContainer headRelease={head}></HeroContainer>
       </div>
       {children}
+      <Footer></Footer>
     </div>
   )
 }

@@ -3,6 +3,7 @@ import "../styles/layout.scss"
 import "../styles/global.scss"
 import HeaderMenu from "../components/headerMenu"
 import { SEO } from "gatsby-plugin-seo"
+import Footer from "../components/footerComponent"
 
 const contactLayout = ({ children }) => {
   return (
@@ -23,6 +24,7 @@ const contactLayout = ({ children }) => {
       />
       <HeaderMenu></HeaderMenu>
       <div>{children}</div>
+      <Footer></Footer>
     </div>
   )
 }

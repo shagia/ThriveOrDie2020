@@ -5,6 +5,7 @@ import "../styles/releaseContainer.scss"
 import "../styles/layout.scss"
 import "../styles/global.scss"
 import { SEO } from "gatsby-plugin-seo"
+import Footer from "../components/footerComponent"
 
 export default ({ data }) => {
   //console.log(data)
@@ -33,7 +34,7 @@ export default ({ data }) => {
             <Link to={node.fields.slug} className="release-anchor">
               <div>
                 <img
-                  alt="Release art"
+                  alt="Artist pic"
                   className="release-art-src"
                   src={node.artwork}
                 ></img>
@@ -46,6 +47,7 @@ export default ({ data }) => {
       {/* <small style={{ padding: "1rem", textAlign: "center", display: "block" }}>
         THRIVE
       </small> */}
+      <Footer></Footer>
     </div>
   )
 }

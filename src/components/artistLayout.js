@@ -7,6 +7,7 @@ import HeaderMenu from "../components/headerMenu"
 import ReleaseContainer from "../components/releaseContainer"
 import InterviewContainer from "../components/interviewContainer"
 import { SEO } from "gatsby-plugin-seo"
+import Footer from "../components/footerComponent"
 
 export default ({ data }) => {
   const post = data.artistsJson
@@ -45,6 +46,7 @@ export default ({ data }) => {
         <h3>FEATURES & INTERVIEWS</h3>
         <InterviewContainer interviewData={interviewData} />
       </div>
+      <Footer></Footer>
     </div>
   )
 }
