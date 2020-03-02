@@ -6,18 +6,33 @@ import "../styles/global.scss"
 import HeaderMenu from "../components/headerMenu"
 import ReleaseContainer from "../components/releaseContainer"
 import InterviewContainer from "../components/interviewContainer"
+import { SEO } from "gatsby-plugin-seo"
 
 export default ({ data }) => {
   const post = data.artistsJson
   const postImg = data.allFile.edges[0].node.childImageSharp
   const releaseData = data.allReleasesJson.edges
   const interviewData = data.allMarkdownRemark.edges
-  //console.log(post)
+  console.log(post)
   console.log(postImg)
   console.log(releaseData)
   console.log(interviewData)
   return (
     <div className="master-container">
+      <SEO
+        title={post.title}
+        description="NO COMPROMISE"
+        pagePath={"/" + post.tags[0]}
+        schema={`{
+              "@context": "https://todmg.club/",
+              "@type": "WebPage",
+              "mainEntity": {
+                "@type": "Organization",
+                "name": "THRIVE OR DIE",
+                "image": "../../static/logo.png"
+              }
+            }`}
+      />
       <HeaderMenu></HeaderMenu>
       <div>
         <HeroContainer artistImg={postImg} artistObj={post}></HeroContainer>
@@ -47,7 +62,6 @@ export const query = graphql`
         youtube
         bandcamp
         facebook
-        
       }
       hometown
       artwork
@@ -58,7 +72,7 @@ export const query = graphql`
       edges {
         node {
           childImageSharp {
-            fluid(quality: 60)  {
+            fluid(quality: 60) {
               src
               base64
               tracedSVG
