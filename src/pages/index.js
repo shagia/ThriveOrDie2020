@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import HomeLayout from "../components/homeLayout"
 
 export default ({ data }) => {
-  console.log(data)
+  //console.log(data)
   return (
     <div>
       {/* consider using two layouts at this point */}

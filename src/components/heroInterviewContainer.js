@@ -4,12 +4,16 @@ import "../styles/global.scss"
 import "../styles/hero.scss"
 
 const InterviewHeader = ({ children, postHeadImg, postTitle }) => {
-  console.log(postHeadImg)
+  //console.log(postHeadImg)
   return (
     <div className="">
       <div className="hero-container-no-flex">
         <div className="hero-img-container">
-          <img alt="Placeholder" src={postHeadImg} className="hero-img-src-interview"></img>
+          <img
+            alt="Placeholder"
+            src={postHeadImg}
+            className="hero-img-src-interview"
+          ></img>
         </div>
         <div className="hero-detail-container">
           <div className="head-title-social">

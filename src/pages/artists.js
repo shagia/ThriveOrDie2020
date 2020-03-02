@@ -7,7 +7,7 @@ import "../styles/global.scss"
 import { SEO } from "gatsby-plugin-seo"
 
 export default ({ data }) => {
-  console.log(data)
+  //console.log(data)
   return (
     <div className="master-container">
       <SEO

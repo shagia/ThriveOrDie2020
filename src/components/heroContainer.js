@@ -2,11 +2,19 @@ import React from "react"
 import "../styles/layout.scss"
 import "../styles/global.scss"
 import "../styles/hero.scss"
-import { FaEnvelope, FaTwitter, FaSoundcloud, FaInstagram, FaYoutube, FaBandcamp, FaFacebookSquare } from "react-icons/fa"
+import {
+  FaEnvelope,
+  FaTwitter,
+  FaSoundcloud,
+  FaInstagram,
+  FaYoutube,
+  FaBandcamp,
+  FaFacebookSquare,
+} from "react-icons/fa"
 //may need to make a socials component soon
 
 let makeSocials = socialObj => {
-  console.log(socialObj)
+  //console.log(socialObj)
   return (
     <ul>
       {socialObj.email ? (
@@ -165,13 +173,13 @@ const Hero = props => {
               }}
             ></div>
             <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href={props.headRelease.link}
-                  className="tod-button-black button-wide"
-                >
-                  Stream / Download
-                </a>
+              rel="noopener noreferrer"
+              target="_blank"
+              href={props.headRelease.link}
+              className="tod-button-black button-wide"
+            >
+              Stream / Download
+            </a>
           </div>
         )}
       </div>

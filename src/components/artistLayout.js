@@ -13,10 +13,10 @@ export default ({ data }) => {
   const postImg = data.allFile.edges[0].node.childImageSharp
   const releaseData = data.allReleasesJson.edges
   const interviewData = data.allMarkdownRemark.edges
-  console.log(post)
-  console.log(postImg)
-  console.log(releaseData)
-  console.log(interviewData)
+  //console.log(post)
+  //console.log(postImg)
+  //console.log(releaseData)
+  //console.log(interviewData)
   return (
     <div className="master-container">
       <SEO
