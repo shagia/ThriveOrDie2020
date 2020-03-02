@@ -1,9 +1,9 @@
 ---
-title: "FRAX IS SMOKING JOINTS"
+title: "Placeholder Interview"
 date: "2020-02-21"
 author: ""
 artwork: "https://picsum.photos/1200"
-tags: "fraxiom"
+tags: ""
 ---
 
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit; Aenean commodo ligula
