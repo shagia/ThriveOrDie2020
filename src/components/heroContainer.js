@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import "../styles/layout.scss"
 import "../styles/global.scss"
 import "../styles/hero.scss"
-import { FaEnvelope, FaTwitter, FaSoundcloud } from "react-icons/fa"
+import { FaEnvelope, FaTwitter, FaSoundcloud, FaInstagram, FaFacebook, FaYoutube, FaBandcamp, FaFacebookSquare } from "react-icons/fa"
 //may need to make a socials component soon
 
 let makeSocials = socialObj => {
@@ -23,7 +23,7 @@ let makeSocials = socialObj => {
         </li>
       ) : (
         ""
-      )}{" "}
+      )}
       {socialObj.twitter ? (
         <li>
           <a
@@ -36,7 +36,7 @@ let makeSocials = socialObj => {
         </li>
       ) : (
         ""
-      )}{" "}
+      )}
       {socialObj.soundcloud ? (
         <li>
           <a
@@ -45,6 +45,58 @@ let makeSocials = socialObj => {
             href={"https://soundcloud.com/" + socialObj.soundcloud}
           >
             <FaSoundcloud />
+          </a>
+        </li>
+      ) : (
+        ""
+      )}
+      {socialObj.facebook ? (
+        <li>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href={"https://facebook.com/" + socialObj.facebook}
+          >
+            <FaFacebookSquare />
+          </a>
+        </li>
+      ) : (
+        ""
+      )}
+      {socialObj.instagram ? (
+        <li>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href={"https://instagram.com/" + socialObj.instagram}
+          >
+            <FaInstagram />
+          </a>
+        </li>
+      ) : (
+        ""
+      )}
+      {socialObj.youtube ? (
+        <li>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href={"https://youtube.com/" + socialObj.youtube}
+          >
+            <FaYoutube />
+          </a>
+        </li>
+      ) : (
+        ""
+      )}
+      {socialObj.bandcamp ? (
+        <li>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href={"https://" + socialObj.bandcamp + ".bandcamp.com"}
+          >
+            <FaBandcamp />
           </a>
         </li>
       ) : (

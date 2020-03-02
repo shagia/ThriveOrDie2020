@@ -44,6 +44,10 @@ export const query = graphql`
         email
         twitter
         soundcloud
+        youtube
+        bandcamp
+        facebook
+        
       }
       hometown
       artwork
