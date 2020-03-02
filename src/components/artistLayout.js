@@ -54,7 +54,7 @@ export const query = graphql`
       edges {
         node {
           childImageSharp {
-            fluid {
+            fluid(quality: 60)  {
               src
               base64
               tracedSVG
