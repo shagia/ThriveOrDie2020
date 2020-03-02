@@ -3,7 +3,7 @@ import "../styles/layout.scss"
 import "../styles/global.scss"
 import HeaderMenu from "../components/headerMenu"
 
-const homeLayout = ({ children }) => {
+const contactLayout = ({ children }) => {
   return (
     <div className="master-container">
       <HeaderMenu></HeaderMenu>
@@ -14,4 +14,4 @@ const homeLayout = ({ children }) => {
   )
 }
 
-export default homeLayout
+export default contactLayout

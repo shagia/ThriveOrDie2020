@@ -42,7 +42,7 @@ export default ({ data }) => {
           ))}
         </div>
       </HomeLayout>
-    </div>
+    </div> 
   )
 }
 

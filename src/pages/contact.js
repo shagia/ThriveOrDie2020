@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/contactLayout"
+import "../styles/contact.scss"
 
 export default ({ data }) => (
   <div>
@@ -32,22 +33,24 @@ export default ({ data }) => (
         <form method="post" action="https://getform.io/f/621a28b5-638c-47ce-8b2c-46374d81bdef">
         <label>
           <div>Name</div>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name" required />
         </label>
         <label>
           <div>Email</div>
-          <input type="email" name="email" id="email" />
+          <input type="email" name="email" id="email" required />
         </label>
         <label>
          <div>Subject</div>
-          <input type="text" name="subject" id="subject" />
+          <input type="text" name="subject" id="subject" required />
         </label>
         <label>
           <div>Message</div>
-          <textarea name="message" id="message" rows="5" />
+          <textarea name="message" id="message" rows="5" required />
         </label><br></br>
-        <button type="submit">Send</button>
-        <input type="reset" value="Clear" />
+        <input className="clear-input tod-button-black" type="reset" value="Clear" />
+        <div className="contact-controls"><button className="tod-button-black" type="submit">Send</button>
+        
+        </div>
       </form>
       </div>
     </Layout>
