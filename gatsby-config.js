@@ -6,13 +6,14 @@
 
 module.exports = {
   siteMetadata: {
-    title: `THRIVE OR DIE`,
+    title: `THRIVE OR DIE.`,
   },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -34,6 +35,12 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: 'static/logo.png'
+      }
     },
     {
       resolve: "gatsby-plugin-seo",

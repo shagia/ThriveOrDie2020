@@ -2,9 +2,11 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/contactLayout"
 import "../styles/contact.scss"
+import SeoComponent from "../components/seoComponent"
 
 export default ({ data }) => (
   <div>
+    <SeoComponent isArtistPage={false} page="Contact" />
     <Layout>
       <h3>Contact</h3>
       <div>You can send us general inqueries, booking, demos, or just any random thoughts you have in mind. If you're sending demos, <b>please</b> submit under these guidelines:

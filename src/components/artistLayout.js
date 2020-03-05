@@ -6,8 +6,8 @@ import "../styles/global.scss"
 import HeaderMenu from "../components/headerMenu"
 import ReleaseContainer from "../components/releaseContainer"
 import InterviewContainer from "../components/interviewContainer"
-import { SEO } from "gatsby-plugin-seo"
 import Footer from "../components/footerComponent"
+import SeoComponent from "../components/seoComponent"
 
 export default ({ data }) => {
   const post = data.artistsJson
@@ -20,20 +20,7 @@ export default ({ data }) => {
   //console.log(interviewData)
   return (
     <div className="master-container">
-      <SEO
-        title={post.title}
-        description="NO COMPROMISE"
-        pagePath={"/" + post.tags[0]}
-        schema={`{
-              "@context": "https://todmg.club/",
-              "@type": "WebPage",
-              "mainEntity": {
-                "@type": "Organization",
-                "name": "THRIVE OR DIE",
-                "image": "../../static/logo.png"
-              }
-            }`}
-      />
+      <SeoComponent isArtistPage={true} page={post.title} artistImg={postImg} artistObj={post} />
       <HeaderMenu></HeaderMenu>
       <div>
         <HeroContainer artistImg={postImg} artistObj={post}></HeroContainer>
