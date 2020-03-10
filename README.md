@@ -17,4 +17,4 @@
 
 ### Accessibility  
 
-*Nothing yet..*
+- [ ] Start converting elements to semantic HTML **ASAP**
