@@ -14,6 +14,7 @@
 ### Data
 
 - [ ] Run all pictures through Gatsby Img and make interview pages be able to get an img/ folder of the same slug and create an object with them all to use anywhere
+- [ ] Fix metadata images not showing up in twitter cards and such
 
 ### Accessibility  
 
