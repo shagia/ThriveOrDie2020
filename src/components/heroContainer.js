@@ -180,6 +180,20 @@ const Hero = props => {
             >
               Stream / Download
             </a>
+            {props.headRelease.stems ? (
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href={props.headRelease.stems}
+                className="tod-button-black button-wide"
+              >
+                {props.headRelease.customText
+                  ? props.headRelease.customText[0]
+                  : "Test"}
+              </a>
+            ) : (
+              ""
+            )}
           </div>
         )}
       </div>
