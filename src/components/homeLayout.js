@@ -8,7 +8,6 @@ import SeoComponent from "../components/seoComponent"
 
 const homeLayout = ({ children, homeData }) => {
   const head = homeData.node //Passing through the passedthrough home data variable
-  console.log(head)
   return (
     <div className="master-container">
       <SeoComponent isArtistPage={false} page="Home" />
