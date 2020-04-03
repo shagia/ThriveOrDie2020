@@ -58,6 +58,8 @@ export const query = graphql`
           id
           desc
           link
+          stems
+          customText
         }
       }
     }
